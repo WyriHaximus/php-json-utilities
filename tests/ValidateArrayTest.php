@@ -31,11 +31,13 @@ final class ValidateArrayTest extends TestCase
         self::assertFalse(WyriHaximus\validate_array($data, $fields));
     }
 
+
+    /**
+     * @expectedException WyriHaximus\Tests\TestException
+     * @expectedExceptionMessage "[]" is not an beer, missing ingredient "water"
+     */
     public function testFailureException()
     {
-        self::expectException(TestException::class);
-        self::expectExceptionMessage('"[]" is not an beer, missing ingredient "water"');
-
         $fields = [
             'water',
         ];
