@@ -31,7 +31,6 @@ final class ValidateArrayTest extends TestCase
         self::assertFalse(WyriHaximus\validate_array($data, $fields));
     }
 
-
     /**
      * @expectedException WyriHaximus\Tests\TestException
      * @expectedExceptionMessage "[]" is not an beer, missing ingredient "water"
