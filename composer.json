@@ -1,6 +1,6 @@
 {
     "name": "wyrihaximus/json-utilities",
-    "description": "JSON encode and decode PSR-7 requests and responses",
+    "description": "Utilities for php-json-* packages",
     "license": "MIT",
     "authors": [
         {
