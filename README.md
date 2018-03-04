@@ -1,4 +1,4 @@
-# Utilities for php-json-* packages
+# Utilities for my php-json-* packages
 
 [![Linux Build Status](https://travis-ci.org/WyriHaximus/php-json-utilities.png)](https://travis-ci.org/WyriHaximus/php-json-utilities)
 [![Windows Build status](https://ci.appveyor.com/api/projects/status/1sfdh9g2pvbuw4pp?svg=true)](https://ci.appveyor.com/project/WyriHaximus/php-json-utilities)
