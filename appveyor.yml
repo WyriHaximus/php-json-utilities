@@ -7,25 +7,13 @@ clone_folder: c:\projects\php-project-workspace
 environment:
   matrix:
   - dependencies: lowest
-    php_ver_target: 7.0
-  - dependencies: lowest
-    php_ver_target: 7.1
-  - dependencies: lowest
     php_ver_target: 7.2
   - dependencies: current
-    php_ver_target: 7.0
-  - dependencies: current
-    php_ver_target: 7.1
-  - dependencies: current
     php_ver_target: 7.2
-  - dependencies: highest
-    php_ver_target: 7.0
-  - dependencies: highest
-    php_ver_target: 7.1
   - dependencies: highest
     php_ver_target: 7.2
 
-## Cache composer file
+## Cache composer, chocolatey and php bits
 cache:
     - '%LOCALAPPDATA%\Composer\files -> composer.lock'
 
@@ -50,7 +38,6 @@ install:
     - IF %PHP%==1 echo @php %%~dp0composer.phar %%* > composer.bat
     - appveyor-retry appveyor DownloadFile https://getcomposer.org/composer.phar
     - cd c:\projects\php-project-workspace
-    - composer config --unset platform.php
     - IF %dependencies%==lowest appveyor-retry composer update --prefer-lowest --no-progress --profile -n
     - IF %dependencies%==current appveyor-retry composer install --no-progress --profile
     - IF %dependencies%==highest appveyor-retry composer update --no-progress --profile -n

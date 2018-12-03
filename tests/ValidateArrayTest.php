@@ -1,13 +1,16 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace WyriHaximus\Tests;
 
 use PHPUnit\Framework\TestCase;
 use WyriHaximus;
 
+/**
+ * @internal
+ */
 final class ValidateArrayTest extends TestCase
 {
-    public function testSuccess()
+    public function testSuccess(): void
     {
         $fields = [
             'key',
@@ -20,7 +23,7 @@ final class ValidateArrayTest extends TestCase
         self::assertTrue(WyriHaximus\validate_array($data, $fields));
     }
 
-    public function testFailure()
+    public function testFailure(): void
     {
         $fields = [
             'key',
@@ -35,7 +38,7 @@ final class ValidateArrayTest extends TestCase
      * @expectedException WyriHaximus\Tests\TestException
      * @expectedExceptionMessage "[]" is not an beer, missing ingredient "water"
      */
-    public function testFailureException()
+    public function testFailureException(): void
     {
         $fields = [
             'water',
