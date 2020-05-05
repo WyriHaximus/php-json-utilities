@@ -2,6 +2,8 @@
 
 namespace WyriHaximus\React;
 
-if (!\function_exists('WyriHaximus\validate_array')) {
+use function function_exists;
+
+if (! function_exists('WyriHaximus\validate_array')) {
     require __DIR__ . '/functions.php';
 }

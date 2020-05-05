@@ -1,0 +1,11 @@
+parameters:
+	ignoreErrors:
+		- '#Function WyriHaximus\\validate_array\(\) has parameter \$exception with null as default value.#'
+		- '#Language construct isset\(\) should not be used.#'
+		- '#Function WyriHaximus\\validate_array\(\) has parameter \$exception with a nullable type declaration.#'
+	ergebnis:
+		classesAllowedToBeExtended:
+			- Exception
+
+includes:
+	- vendor/wyrihaximus/test-utilities/rules.neon
