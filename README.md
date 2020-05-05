@@ -1,7 +1,6 @@
 # Utilities for my php-json-* packages
 
-[![Linux Build Status](https://travis-ci.org/WyriHaximus/php-json-utilities.png)](https://travis-ci.org/WyriHaximus/php-json-utilities)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/1sfdh9g2pvbuw4pp?svg=true)](https://ci.appveyor.com/project/WyriHaximus/php-json-utilities)
+![Continuous Integration](https://github.com/WyriHaximus/php-json-utilities/workflows/Continuous%20Integration/badge.svg)
 [![Latest Stable Version](https://poser.pugx.org/WyriHaximus/json-utilities/v/stable.png)](https://packagist.org/packages/WyriHaximus/json-utilities)
 [![Total Downloads](https://poser.pugx.org/WyriHaximus/json-utilities/downloads.png)](https://packagist.org/packages/WyriHaximus/json-utilities)
 [![Code Coverage](https://scrutinizer-ci.com/g/WyriHaximus/php-json-utilities/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/WyriHaximus/php-json-utilities/?branch=master)
@@ -13,16 +12,16 @@
 To install via [Composer](http://getcomposer.org/), use the command below, it will automatically detect the latest version and bind it with `~`.
 
 ```
-composer require wyrihaximus/json-utilities 
+composer require wyrihaximus/json-utilities
 ```
 
 # Available functions
 
 ### validate_array
 
-Validates an array by checking if the list of required keys all can be found in the passed array. On success it will 
-return `true`, when it comes across a key it can find in the array it will return `false`. How ever then passed an 
-exception it will create that exception by passing the array as first argument and the missing key as second argument 
+Validates an array by checking if the list of required keys all can be found in the passed array. On success it will
+return `true`, when it comes across a key it can find in the array it will return `false`. How ever then passed an
+exception it will create that exception by passing the array as first argument and the missing key as second argument
 to the constructor.
 
 ```php

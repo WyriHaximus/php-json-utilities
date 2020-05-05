@@ -3,49 +3,55 @@
 namespace WyriHaximus\Tests;
 
 use PHPUnit\Framework\TestCase;
-use WyriHaximus;
+use function WyriHaximus\validate_array;
 
-/**
- * @internal
- */
 final class ValidateArrayTest extends TestCase
 {
     public function testSuccess(): void
     {
-        $fields = [
-            'key',
-        ];
+        $fields = ['key'];
 
-        $data = [
-            'key' => 'value',
-        ];
+        $data = ['key' => 'value'];
 
-        self::assertTrue(WyriHaximus\validate_array($data, $fields));
+        self::assertTrue(validate_array($data, $fields));
+    }
+
+    public function testSuccessWithTypes(): void
+    {
+        $fields = ['key' => 'string'];
+
+        $data = ['key' => 'value'];
+
+        self::assertTrue(validate_array($data, $fields));
+    }
+
+    public function testSuccessWithArrayOfTypes(): void
+    {
+        $fields = ['key' => ['string', 'integer']];
+
+        $data = ['key' => 'value'];
+
+        self::assertTrue(validate_array($data, $fields));
     }
 
     public function testFailure(): void
     {
-        $fields = [
-            'key',
-        ];
+        $fields = ['key'];
 
         $data = [];
 
-        self::assertFalse(WyriHaximus\validate_array($data, $fields));
+        self::assertFalse(validate_array($data, $fields));
     }
 
-    /**
-     * @expectedException WyriHaximus\Tests\TestException
-     * @expectedExceptionMessage "[]" is not an beer, missing ingredient "water"
-     */
     public function testFailureException(): void
     {
-        $fields = [
-            'water',
-        ];
+        self::expectException(TestException::class);
+        self::expectExceptionMessage('"[]" is not an beer, missing ingredient "water"');
+
+        $fields = ['water'];
 
         $data = [];
 
-        self::assertFalse(WyriHaximus\validate_array($data, $fields, TestException::class));
+        self::assertFalse(validate_array($data, $fields, TestException::class));
     }
 }
