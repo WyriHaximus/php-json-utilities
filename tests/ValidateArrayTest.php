@@ -1,8 +1,11 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace WyriHaximus\Tests;
 
 use PHPUnit\Framework\TestCase;
+
 use function WyriHaximus\validate_array;
 
 final class ValidateArrayTest extends TestCase
