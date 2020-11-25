@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18d6e3afcdda0a4119597b22b1aff884",
+    "content-hash": "1645f5d025821f17b12ef12ceda78ab1",
     "packages": [
         {
             "name": "thecodingmachine/safe",
@@ -7972,7 +7972,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4"
+        "php": "^8 || ^7.4"
     },
     "platform-dev": [],
     "platform-overrides": {
