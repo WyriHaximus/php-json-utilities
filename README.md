@@ -3,9 +3,7 @@
 ![Continuous Integration](https://github.com/WyriHaximus/php-json-utilities/workflows/Continuous%20Integration/badge.svg)
 [![Latest Stable Version](https://poser.pugx.org/WyriHaximus/json-utilities/v/stable.png)](https://packagist.org/packages/WyriHaximus/json-utilities)
 [![Total Downloads](https://poser.pugx.org/WyriHaximus/json-utilities/downloads.png)](https://packagist.org/packages/WyriHaximus/json-utilities)
-[![Code Coverage](https://scrutinizer-ci.com/g/WyriHaximus/php-json-utilities/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/WyriHaximus/php-json-utilities/?branch=master)
 [![License](https://poser.pugx.org/WyriHaximus/json-utilities/license.png)](https://packagist.org/packages/wyrihaximus/json-utilities)
-[![PHP 7 ready](http://php7ready.timesplinter.ch/WyriHaximus/php-json-utilities/badge.svg)](https://travis-ci.org/WyriHaximus/php-json-utilities)
 
 ### Installation ###
 
@@ -38,7 +36,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## License ##
 
-Copyright 2018 [Cees-Jan Kiewiet](http://wyrihaximus.net/)
+Copyright 2025 [Cees-Jan Kiewiet](http://wyrihaximus.net/)
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
