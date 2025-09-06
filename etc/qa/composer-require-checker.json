@@ -1,0 +1,20 @@
+{
+  "symbol-whitelist" : [
+    "null", "true", "false",
+    "static", "self", "parent",
+    "array", "string", "int", "float", "bool", "iterable", "callable", "void", "object",
+    "Composer\\Composer", "Composer\\Config", "Composer\\InstalledVersions", "Composer\\IO\\IOInterface",
+    "Package\\Loader\\ArrayLoader", "Composer\\Package\\Loader\\ArrayLoader", "Composer\\Package\\Loader\\JsonLoader",
+    "Composer\\Package\\PackageInterface", "Composer\\Package\\RootPackageInterface", "json_decode", "json_encode"
+  ],
+  "php-core-extensions" : [
+    "Core",
+    "date",
+    "pcre",
+    "Phar",
+    "Reflection",
+    "SPL",
+    "standard"
+  ],
+  "scan-files" : []
+}
