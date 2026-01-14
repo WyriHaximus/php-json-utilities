@@ -4,13 +4,15 @@ declare(strict_types=1);
 
 namespace WyriHaximus\Tests;
 
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 use function WyriHaximus\validate_array;
 
 final class ValidateArrayTest extends TestCase
 {
-    public function testSuccess(): void
+    #[Test]
+    public function success(): void
     {
         $fields = ['key'];
 
@@ -19,7 +21,8 @@ final class ValidateArrayTest extends TestCase
         self::assertTrue(validate_array($data, $fields));
     }
 
-    public function testSuccessWithTypes(): void
+    #[Test]
+    public function successWithTypes(): void
     {
         $fields = ['key' => 'string'];
 
@@ -28,7 +31,8 @@ final class ValidateArrayTest extends TestCase
         self::assertTrue(validate_array($data, $fields));
     }
 
-    public function testSuccessWithArrayOfTypes(): void
+    #[Test]
+    public function successWithArrayOfTypes(): void
     {
         $fields = ['key' => ['string', 'integer']];
 
@@ -37,7 +41,8 @@ final class ValidateArrayTest extends TestCase
         self::assertTrue(validate_array($data, $fields));
     }
 
-    public function testFailure(): void
+    #[Test]
+    public function failure(): void
     {
         $fields = ['key'];
 
@@ -46,7 +51,8 @@ final class ValidateArrayTest extends TestCase
         self::assertFalse(validate_array($data, $fields));
     }
 
-    public function testFailureException(): void
+    #[Test]
+    public function failureException(): void
     {
         self::expectException(TestException::class);
         self::expectExceptionMessage('"[]" is not an beer, missing ingredient "water"');
