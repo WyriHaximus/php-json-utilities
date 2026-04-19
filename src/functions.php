@@ -12,6 +12,7 @@ use function count;
 use function gettype;
 use function in_array;
 use function is_array;
+use function is_int;
 use function is_string;
 
 /**
@@ -22,7 +23,7 @@ use function is_string;
  */
 function validate_array(array $data, array $fields, string|null $exception = null): bool
 {
-    $isInt = count(array_filter(array_keys($fields), 'is_int')) === count($fields);
+    $isInt = count(array_filter(array_keys($fields), is_int(...))) === count($fields);
 
     foreach ($fields as $field => $type) {
         if ($isInt) {
