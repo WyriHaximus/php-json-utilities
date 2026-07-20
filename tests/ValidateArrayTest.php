@@ -55,7 +55,7 @@ final class ValidateArrayTest extends TestCase
     public function failureException(): void
     {
         self::expectException(TestException::class);
-        self::expectExceptionMessage('"[]" is not an beer, missing ingredient "water"');
+        self::expectExceptionMessageIsOrContains('"[]" is not an beer, missing ingredient "water"');
 
         $fields = ['water'];
 
