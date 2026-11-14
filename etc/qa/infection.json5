@@ -118,5 +118,6 @@
                 "WyriHaximus\\Composer\\GenerativePluginTooling\\GenerativePluginExecutioner::listClassesInPackages"
             ]
         }
-    }
+    },
+    "threads": 64
 }
